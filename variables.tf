@@ -38,8 +38,3 @@ variable "ebs_volume_size" {
   type        = number
   default     = 10
 }
-
-variable "bucket_name" {
-  description = "S3 bucket name"
-  type        = string
-}
