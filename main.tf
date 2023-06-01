@@ -20,9 +20,3 @@ resource "aws_instance" "intuitive_ec2_instance" {
     volume_type = "gp2"
   }
 }
-
-# Create S3 bucket
-resource "aws_s3_bucket" "intuitive_s3_bucket" {
-  bucket = var.bucket_name
-  acl    = "private"
-}
