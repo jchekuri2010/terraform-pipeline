@@ -5,7 +5,7 @@ resource "aws_vpc" "intuitive_vpc" {
 
 # Create subnet
 resource "aws_subnet" "intuitive_subnet" {
-  vpc_id     = aws_vpc.my_vpc.id
+  vpc_id     = aws_vpc.intuitive_vpc.id
   cidr_block = var.subnet_cidr_block
 }
 
@@ -13,7 +13,7 @@ resource "aws_subnet" "intuitive_subnet" {
 resource "aws_instance" "intuitive_ec2_instance" {
   count         = var.instance_count
   instance_type = var.instance_type
-  subnet_id     = aws_subnet.my_subnet.id
+  subnet_id     = aws_subnet.intuitive_subnet.id
 
   root_block_device {
     volume_size = var.ebs_volume_size
