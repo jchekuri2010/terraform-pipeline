@@ -10,7 +10,8 @@ variable "vpc_cidr_block" {
   default     = "10.0.0.0/16"
 }
 
-variable "intuitive-s3-bucket" {
+variable "bucket_name" {
+  bucket_name = "intuitive-s3-bucket"
   description = "Name of the S3 bucket"
   type        = string
   default = "us-east-1"
