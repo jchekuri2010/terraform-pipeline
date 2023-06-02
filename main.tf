@@ -21,7 +21,7 @@ provider "aws" {
 }
   
 resource "aws_s3_bucket" "hosting_bucket"{
-  bucket = "my_bucket_demo3"
+  bucket = var.bucket_name
   acl    = "private"
   
 }
