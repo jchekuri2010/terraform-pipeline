@@ -7,11 +7,11 @@ resource "aws_vpc" "intuitive_vpc" {
   }
 }
 
-resource "aws_s3_bucket" "intuitive_bucket_s3" {
+resource "aws_s3_bucket" "intuitive_bucket_s3_demo1" {
   bucket = var.bucket_name
   
    tags = {
-    Name = "intuitive_bucket_s3"
+    Name = "intuitive_bucket_s3_demo1"
   }
 }
 
@@ -36,6 +36,6 @@ resource "aws_instance" "intuitive_ec2_instance" {
     volume_type = "gp2"
   }
   tags = {
-    Name = "intuitive_ec2_instance"
+    Name = "${var.base_instance_name}-${count.index + 1}"
   }
 }
