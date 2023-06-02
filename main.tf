@@ -14,7 +14,7 @@ resource "aws_instance" "intuitive_ec2_instance" {
   count         = var.instance_count
   instance_type = var.instance_type
   subnet_id     = aws_subnet.intuitive_subnet.id
-
+    ami            = "ami-0715c1897453cabd1"      
   root_block_device {
     volume_size = var.ebs_volume_size
     volume_type = "gp2"
