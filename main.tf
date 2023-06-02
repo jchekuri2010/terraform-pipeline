@@ -8,14 +8,19 @@ resource "aws_vpc" "intuitive_vpc" {
 }
 
 
-resource "random_string" "random_bucket_suffix" {
-  length  = 6
-  special = false
-  upper = false
-  number = true
+terraform {
+  required_providers {
+    aws = {
+      source = "harshicorp/aws"
+      version = "~> 4.0"
+    }
+  }
 }
-
-resource "aws_s3_bucket" "b"{
+provider "aws" {
+  region = var.aws_region
+}
+  
+resource "aws_s3_bucket" "hosting_bucket"{
   bucket = "my_bucket_demo3"
   acl    = "private"
   
