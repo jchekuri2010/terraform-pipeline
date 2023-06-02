@@ -38,7 +38,3 @@ variable "ebs_volume_size" {
   type        = number
   default     = 10
 }
-variable "intuitive-s3" {
-  description = "S3 bucket name"
-  type        = string
-}
