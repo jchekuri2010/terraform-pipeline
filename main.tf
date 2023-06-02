@@ -7,11 +7,11 @@ resource "aws_vpc" "intuitive_vpc" {
   }
 }
 
-resource "aws_s3_bucket" "intuitive-s3-bucket" {
+resource "aws_s3_bucket" "intuitive_bucket_s3" {
   bucket = var.bucket_name
   
    tags = {
-    Name = "intuitive_s3-bucket"
+    Name = "intuitive_bucket_s3"
   }
 }
 
