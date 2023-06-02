@@ -3,7 +3,7 @@ resource "aws_vpc" "intuitive_vpc" {
   cidr_block = var.vpc_cidr_block
   
   tags = {
-    Name = var.tags
+    Name = "intuitive_vpc"
   }
 }
 
@@ -30,4 +30,7 @@ resource "aws_instance" "intuitive_ec2_instance" {
   tags = {
     Name = "intuitive_ec2_instance"
   }
+}
+resource "aws_s3_bucket" "my_s3_bucket" {
+  bucket = var.bucket_name
 }
