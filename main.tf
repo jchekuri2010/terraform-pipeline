@@ -9,7 +9,6 @@ resource "aws_vpc" "intuitive_vpc" {
 
 resource "aws_s3_bucket" "intuitive-s3-bucket" {
   bucket = var.bucket_name
-  acl    = "private"
   
    tags = {
     Name = "intuitive_s3-bucket"
