@@ -23,7 +23,7 @@ variable "subnet_cidr_block" {
   default     = "10.0.0.0/24"
 }
 
-variable "instance_type" {
+variable "base_instance_name" {
   description = "EC2 instance type"
   type        = string
   default     = "t2.micro"
