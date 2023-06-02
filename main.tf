@@ -16,8 +16,6 @@ resource "random_string" "random_bucket_suffix" {
 resource "aws_s3_bucket" "my_s3_bucket"{
   bucket = "my-intuitive-${random_string.random_bucket_suffix.result}"
   acl    = "private"
-
-  bucket = var.bucket_name
   
 }
 
