@@ -9,8 +9,10 @@ resource "aws_vpc" "intuitive_vpc" {
 
 
 resource "random_string" "random_bucket_suffix" {
-  length  = 6
+  length  = 8
   special = false
+  upper = false
+  number = true
 }
 
 resource "aws_s3_bucket" "my_s3_bucket"{
