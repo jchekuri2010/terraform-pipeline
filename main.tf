@@ -7,15 +7,6 @@ resource "aws_vpc" "intuitive_vpc" {
   }
 }
 
-
-terraform {
-  required_providers {
-    aws = {
-      source = "harshicorp/aws"
-      version = "~> 4.0"
-    }
-  }
-}
 # provider "aws" {
  # region = var.aws_region
 #}
