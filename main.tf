@@ -7,6 +7,15 @@ resource "aws_vpc" "intuitive_vpc" {
   }
 }
 
+resource "aws_s3_bucket" "my_s3_bucket" {
+  bucket = var.bucket_name
+  acl    = "private"
+  
+   tags = {
+    Name = "intuitive_s3-bucket"
+  }
+}
+
 # Create subnet
 resource "aws_subnet" "intuitive_subnet" {
   vpc_id     = aws_vpc.intuitive_vpc.id
