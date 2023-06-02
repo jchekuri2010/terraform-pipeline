@@ -7,12 +7,18 @@ resource "aws_vpc" "intuitive_vpc" {
   }
 }
 
-resource "aws_s3_bucket" "intuitive_bucket_s3_demo1" {
+
+resource "random_string" "random_bucket_suffix" {
+  length  = 6
+  special = false
+}
+
+resource "aws_s3_bucket" "my_s3_bucket"{
+  bucket = "my-intuitive-${random_string.random_bucket_suffix.result}"
+  acl    = "private"
+
   bucket = var.bucket_name
   
-   tags = {
-    Name = "intuitive_bucket_s3_demo1"
-  }
 }
 
 # Create subnet
