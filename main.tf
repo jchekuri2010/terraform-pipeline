@@ -31,12 +31,3 @@ resource "aws_instance" "intuitive_ec2_instance" {
     Name = "intuitive_ec2_instance"
   }
 }
-resource "aws_s3_bucket" "intuitive-s3" {
-  bucket = var.bucket_name
-  
-    tags = {
-    Name = "intuitive-s3"
-  }
-
-  
-}
