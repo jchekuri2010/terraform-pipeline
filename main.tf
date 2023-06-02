@@ -36,6 +36,6 @@ resource "aws_instance" "intuitive_ec2_instance" {
     volume_type = "gp2"
   }
   tags = {
-    Name = "${var.base_instance_name}-${count.index + 1}"
+    Name = "intuitive_ec2_instance"
   }
 }
