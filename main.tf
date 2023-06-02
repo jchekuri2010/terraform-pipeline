@@ -7,7 +7,7 @@ resource "aws_vpc" "intuitive_vpc" {
   }
 }
 
-resource "aws_s3_bucket" "my_s3_bucket" {
+resource "aws_s3_bucket" "intuitive-s3-bucket" {
   bucket = var.bucket_name
   acl    = "private"
   
