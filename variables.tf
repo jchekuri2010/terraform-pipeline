@@ -30,12 +30,6 @@ variable "instance_type" {
 }
 
 
-variable "base_instance_name" {
-  description = "EC2 instance type"
-  type        = string
-
-}
-
 variable "key_pair_name" {
   description = "Name of the key pair"
   default = "aws-keypair"
